@@ -75,7 +75,6 @@ ramips_setup_interfaces()
 	dir-320-b1|\
 	dir-610-a1|\
 	dir-615-h1|\
-	gb-pc1|\
 	firewrt|\
 	hlk-rm04|\
 	mac1200rv2|\
@@ -208,6 +207,10 @@ ramips_setup_interfaces()
 	y1s)
 		ucidef_add_switch "switch0" \
 			"1:lan" "2:lan" "3:lan" "4:lan" "5:lan" "0:wan" "6@eth0"
+		;;
+	gb-pc1)
+		ucidef_add_switch "switch0" \
+			"0:lan" "4:wan" "6@eth0"
 		;;
 	kn_rc|\
 	kn_rf)

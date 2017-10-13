@@ -5,20 +5,6 @@ cache:
     - bin
     - build_dir
 
-addons:
-  apt:
-    packages:
-      - libncurses5-dev
-      - zlib1g-dev
-      - gawk
-      - flex
-      - quilt
-      - libssl-dev
-      - xsltproc
-      - libxml-parser-perl
-      - ecj
-      - unzip
-
 env:
   global:
     - MAKEFLAGS="-j 2"

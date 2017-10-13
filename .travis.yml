@@ -4,6 +4,9 @@ cache:
   directories:
     - bin
     - build_dir
+    - staging_dir
+    - feeds
+    - packages/feeds
 
 env:
   global:

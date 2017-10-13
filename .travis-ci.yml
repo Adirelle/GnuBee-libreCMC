@@ -1,0 +1,34 @@
+language: c
+
+cache:
+  directories:
+    - bin
+    - build_dir
+
+addons:
+  apt:
+    packages:
+      - libncurses5-dev
+      - zlib1g-dev
+      - gawk
+      - flex
+      - quilt
+      - libssl-dev
+      - xsltproc
+      - libxml-parser-perl
+      - ecj
+      - unzip
+
+env:
+  global:
+    - MAKEFLAGS="-j 2"
+
+install:
+    - ./scripts/feeds update
+    - ./scripts/feeds install -a
+    - cp GB-PC1_defconfig .config
+
+script:
+    - make defconfig
+    - make V=s
+

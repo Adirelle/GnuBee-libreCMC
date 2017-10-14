@@ -4,6 +4,7 @@ cache:
   directories:
     - bin
     - build_dir
+    - dl
     - staging_dir
 
 env:

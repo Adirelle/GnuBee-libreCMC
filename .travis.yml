@@ -5,16 +5,12 @@ cache:
     - bin
     - build_dir
     - staging_dir
-    - feeds
-    - packages/feeds
 
 env:
   global:
     - MAKEFLAGS="-j 2"
 
 install:
-    - ./scripts/feeds update >feeds.log 2>&1
-    - ./scripts/feeds install -a >feeds.log 2>&1
     - cp GB-PC1_defconfig .config
 
 script:

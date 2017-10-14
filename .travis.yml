@@ -22,7 +22,7 @@ stages:
 install:
   - ln -s staging_dir/.config .config
 
-script:
+jobs:
   include:
 
     - stage: configure

@@ -1,7 +1,7 @@
 #!/bin/sh
-set -x
+set -m
 
-while true; do sleep 300; date; done &
+while true; do sleep 300; date; done >&2 &
 timer_pid=$!
 
 $@

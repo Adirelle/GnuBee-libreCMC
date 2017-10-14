@@ -13,23 +13,17 @@ env:
     - PATH="$TRAVIS_BUILD_DIR/staging_dir/host/bin:$TRAVIS_BUILD_DIR/staging_dir/toolchain-mipsel_24kc_gcc-5.4.0_musl-1.1.16/bin:$PATH"
 
 stages:
-  - configure
   - tools
   - toolchain
   - linux
   - packages
 
 install:
-  - ln -s staging_dir/.config .config
+  - cp GB-PC1_defconfig .config
+  - make defconfig
 
 jobs:
   include:
-
-    - stage: configure
-      script:
-        - cp GB-PC1_defconfig .config
-        - make defconfig
-        - mv .config staging_dir
 
     - stage: tools
       script:

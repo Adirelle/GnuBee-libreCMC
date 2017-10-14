@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -m
 
 while true; do sleep 300; date; done >&2 &

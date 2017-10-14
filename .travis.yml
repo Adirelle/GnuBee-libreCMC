@@ -33,19 +33,19 @@ script:
 
     - stage: tools
       script:
-        - ./scripts/stamprun.sh make tools/install
+        - scripts/stamprun.sh make tools/install
 
     - stage: toolchain
       script:
-        - ./scripts/stamprun.sh make toolchain/install
+        - scripts/stamprun.sh make toolchain/install
 
     - stage: linux
       script:
-        - ./scripts/stamprun.sh make linux/compile
+        - scripts/stamprun.sh make linux/compile
 
     - stage: packages
       script:
         - make packages/cleanup
-        - ./scripts/stamprun.sh make packages/compile
+        - scripts/stamprun.sh make packages/compile
 
 # vim:sts=2 sw=2:
